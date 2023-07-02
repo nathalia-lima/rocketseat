@@ -1,0 +1,19 @@
+pra que serve
+    desenvolvimento 
+        back, front, micro serviços, api, machine learning
+    vantagens
+        rapido
+    não é framework, é um js runtime environment, ambiente de desenvolvimento
+
+GOOGLE V8
+    interpretador de js para linguagem de maquina
+
+REPL
+    read - evat - print - loop
+
+DOCUMENTAÇÃO
+    https://nodejs.org/en/docs
+
+VARIAVEIS GLOBAIS
+
+MODULOS 

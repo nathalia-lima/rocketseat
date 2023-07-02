@@ -1,0 +1,90 @@
+web semantica ------------------------
+controlar a organização e apresentação do nosso conteudo
+
+seções comuns
+
+- cabeçalho <header> - inicio da pag
+- navegação <nav>
+- conteudo principal <main> - uma vez por pag
+- barra lateral <aside> - conteudos relaiconados ao principal
+- rodape <footer>
+-article <article> - artigo
+- section <section> - titulo e depois conteudo
+
+Escrever HTML semântico é algo que leva tempo, e precisa de muita prática para fazer com que o HTML tenha maior significado. Temos dois elementos não semânticos para uso genérico, um para bloco e outro para texto, sendo esses o div e o span.
+
+----------------------------------------------------------------------------------------------------------
+CSS
+
+pseudo classes-------------------------------
+:first-child
+:nth-of-type()
+:nth-child()
+:nth-child(odd) e :nth-child(even)
+:hover e :focus 
+:disable e :required
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+
+
+pseudo elements
+::before 
+::after
+::first-line
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+
+FLEXBOX ---------------------------------------
+
+normal flow - flow layout
+forma que os elementos block e inline ficam na página
+
+table --------------------------------
+
+tableless--------------------------------
+uso das propriedades float e clear para que os elementos possam mudar de posição na tela.
+
+flexbox --------------------------------
+display:flex
+flex-direction:column
+
+
+TERMINOLOGIA --------------------------------
+
+flex container
+    flex item
+nesting
+axis - eixo
+    main    
+        start, end
+    cross
+        start, end
+flex sizing
+    flexivel
+    altera width/height dos itens para preenchimento dos espaços do flex container
+
+PROPRIEDADES DO FLEX CONTAINER -----------------------
+
+direção dos itens
+    row
+    row-reverse
+    column
+    column-reverse
+multi linhas
+    flex wrap
+    flex flow
+alinhamento - justify content - alogn itens
+    principal
+    cruzado
+espaços entre os itens
+    gap
+
+PROPRIEDADES DOS ITENS --------------------------
+
+flex basis
+    altura e largura dos itens
+flex grow
+    crescimento do item dentro do container em relação aos espaços vazios
+flex shhrink
+flex
+order

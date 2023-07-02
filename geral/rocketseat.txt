@@ -1,0 +1,424 @@
+FUNDAMENTOS
+- WEB - rede - maneira de estruturasr troca de informações entre computadores;
+
+PROGRAMAR 
+- entender algoritmos: sequencia logica
+- manipulação de dados
+- resolver problemas
+
+COMO FUNCIONA A WEB 
+- HTTP: Hypertext Transfer Protocol, trocar mensagens entre computadores, chunks - pacotes
+- URL: Uniform Resource Locator, localizador de recurso, ou seja, o site
+- Cliente: quem fez o pedido, browser
+- Servidor: recebe os pedidos e envia a resposta
+- TCP: Transmission Control Protocol, garantir q os pacotes cheguem ao destino
+- IP: Internet Protocol, endereçamento
+- DNS: Domain NAme Servers, converter um dominio em um endereço de ip
+- PROXY: disposito no meio do caminho (modem, roteador, outros pcs), encaminhar pacotes
+
+-----------------------------------------------------------
+
+HARDWARE: perifericos, coisas que conseguimos trocar, ex teclado, mouse, monitor
+
+SOFTWARE: parte logica do pc, conjunto de instruções para controlar algo eletrônico
+
+FIRMWARE: armazenar infos, armazenar todas as infos para que o equipamento funcione
+
+DRIVERS: ponte entre o sistema operacional e o firmware, é instaldo no pc qndo há necessidade de conectar um novo dispositivo
+
+SISTEMA OPERACIONAL: gerenciamento de todo hardware de seu dispositivo
+
+PROGRAMAS: conjunto de instruções que descrevem uma tarefa especifica, realizar alguma ação
+
+MEMÓRIA RAM: espaço temporário
+
+HD / SSD:  dispositivos para armazenar dados, hd - pratos/discos de metal e agulha para leitura das infos, ssd - chips de memoria.
+
+PROCESSADOR: transforma as infos em linguagem q o pc entende, em lingugaem binaria
+
+-----------------------------------------------------------
+
+INTERNET: redes interligadas pela rede do mundo todo
+
+REDE DE COMPUTADORES: conexão entre dispositivos para permitir transmissão de dados, acomunicação na internet é feita por protocolos
+
+MAC Adress: numero de identificação gravado no dispositivo de rede
+
+SERVIDORES: pc mais equipado para aguentar os serviços solicitados
+
+-----------------------------------------------------------
+
+LINGAGUEM DE PROGRAMAÇÃO: instruções ao pc, mas só entende uma linga: binario
+- abstração: transformação 
+- low level: baixo nivel, mais prox da maquina, mais rápida
+- high level: alto nivel, mais prox da linguagem humana
+
+--------------------
+tipos de aplicações web
+
+webpage 
+encontrado pelo endereço universar url
+
+websites
+agrupamento estruturado de varias paginas web
+estático: 
+	página não muda, é a mesma para todos os usuários
+	não interage com o banco de dados
+	modificação apenas no código
+	site mais rápido
+
+dinâmico:
+	interação com o banco de dados
+	módificação na pag sem precisar mexer no código
+	gera a pag em tempo real, exemplo perfis das pessoas na rocketseat, cada um tem o seu diferente
+
+web application
+	um programa um software q vive no servidor
+	utilizado atraves de pag web e pelo navegador
+	ex facebook, gmail, figma, rocketseat
+
+front end: lado do cliente, html css js imagens frameworks e bibliotecas
+back end: lado servidor 
+
+aplicação web tradicional: recarregar a pag para ter conteudo atualizado
+	front e back numa só aplicação
+	servidor processa e devolve toda a pag de uma vez
+
+spa: single page application
+	a sensação é de ter uma unica pag
+	não precisa recarregar pra atualizar o conteudo
+	front e back são aplicação diferentes
+	servidor responde a aplicação front end:
+		front com uso de frameworks
+		back end com api = 
+
+ordem de aprendizado:
+sites estáticos-
+aplicação web tradicional-
+single page application-
+
+
+
+----------------------------
+
+fundamentar
+
+caracteres reservados
+anatomia do documento
+semantica: dar significado
+	elementos semanticos:
+
+títulos: h1-h6;
+
+parágrafos: p;
+
+listas: li-item ul-nãoordenada ol-ordenada;
+
+citações: <blockquote> </> <cite> </>;
+
+abreviações: <abbr>;
+
+detalhes de contato/autor: <address>;
+
+listas de descrição: <dl> <dt> <dd></dd> <dt> <dl>;
+
+representando códigos: deixar formatado igual está no código: <code> <pre>
+	*<xmp> mas não é mais utilizado
+
+elementos genéricos: 
+	*div = em blocos
+	*span = em linha
+hyperlinks - âncora: <a>
+	globais: title, id, class
+	href: para onde iremos
+	download: clica e faz download do que clicou
+	target
+		_self: padrão
+		_blank: não sai da pag atual, cria outra
+urls: uniform resource locator: sequencia de texto que define onde algo localizado na web.
+	absolutos: inclui protocolo e nome do dominio, sempre aponta para o mesmo local
+	relativos: relativo a pag aberta no momento, ex pasta q vc esta 
+sair da pasta: ../nomedapasta; diretorio raiz: ./nomedapasta;
+
+tabelas: table=abrir thead=inicio tr=linha th=destaque td=info normal;
+
+cabeçalho: head, 
+	tag meta: 
+		<!-- codificação de caracteres especiais -->
+    	<meta charset="UTF-8">
+
+    	<!-- portabilidade para dispositivos mobiles -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	favicon
+		icones 
+		<!-- favicon básico -->
+		<link rel="icon" href="/icons/icon-48x48.png?v=cfca599cb367ccaf7377d56ddc7542f5"/>
+
+	SEO: search engine optimization (motores de busca = google)
+		<meta name="author" content="Mayk Brito">
+		Temos também o de autor, para definir o autor da página, para possuirmos propriedade sobre a página.
+
+		<meta name="description" content="Um website para iniciantes em programação">
+		Este meta é usado para descrição de sites, caso você não tenha esse meta, o navegador irá procurar qualquer texto seu, mas muito melhor escolher o que você quer que apareça.
+
+		<meta name="robots" content="index, follow">
+		Esse meta diz para o robô do google o que queremos que ele faça, ele é responsável por colocar os resultados da busca , por exemplo. É possível dizer ao robô seguir links na página, através do follow, ou o contrário com o nofollow , ou "indexar" a página, através do index, ou no index.
+
+------------------------------------------------------------------------
+
+GUIA ESTELAR DE css
+
+cascading style sheet
+é uma linguagem style sheet
+
+selector = seletores, onde vai aplicar as propriedade
+declaration = o código doq vai mudar
+properties = propriedades q vão mudar, ex bg color
+property value = valores
+
+seletores 
+	global = *
+	element/type selector = h1, h2, p, div
+	id selector = #algo
+	class selector = .algo
+	atribute selector, pseudo-class, pseudo-element
+
+box model 
+
+É um cálculo matemático, onde cada tipo de seletor e origem do estilo possuem valores a serem considerados. 
+	0. universal selector, o *
+	1. element type selector
+	10. class
+	100. id selector
+	1000. inline
+
+regra !important
+
+at rules: está relacionado ao comportamento do css, começa com o sinal de @
+	@important = incluir um css externo
+	@media = regras condicionais para dispositivos
+	@font-face = fontes externas
+	@keyframes = animation
+
+shorthand = junção de propriedades
+	ex existem varios tipos de background, porém da pra juntar todos em um bg só
+
+funções = nome seguido de abre e fecha parentesis, recebe argumentos
+
+devtools
+
+vendor prefixes
+	-webkit 
+	-moz
+	-ms
+	-o
+	site: cai i use
+
+-----------------------------------------------
+NEM TUDO SÃO PIXELS
+
+MDN = site para entender propriedades do css
+integer = num inteir
+number = numero decimal
+dimension = number com unidade junto 2s 8px
+percentagem = fração de outro num
+
+length = distância
+angle = angulo
+time = tempo
+resolution = resolução para dispositivos
+
+distancias absolutas = length = n altera o valor, masi utilizado px
+ // relativas =  relativas a algum valor, beneficio: maior adaptação aos dispositivos
+
+porcentagens 
+
+position = conjunto de coordenadas top, bottom, left, right = exemplo bg-position
+
+funções = reaproveitamento de codigo, ex:
+	url()
+	rgb()
+	calc()
+
+strings e identificadores = 
+	.box::after {
+		content: "Isso é uma string"
+	}	
+
+-------------------------------------------------------------------------------------------------------------------------
+
+UMA CAIXA DENTRO DA OUTRA
+
+unidades de medidas e valores
+
+box model: caixa retangular
+- tamanho: width height
+- conteudo: content
+- bordas: border
+- preenchimento interno: padding
+- espaço fora da caixa: margin
+
+* { box sizing: border-box }
+
+display
+
+- block: ocupa toda a linha, colocando o prox elemento abaixo
+- inline: elemento um ao lado do outro
+
+margin: espaços externos entre os elementos
+
+padding: preenchimento interno da caixa
+
+border e outline: 
+
+
+cores e background
+
+- keyword named values - palavra chave e valores
+
+- hexadecimal: 0-F
+- RGB: 0-255 
+	rbb(255, 0 , 3)
+-HSL: roda de cores, escolha por graus referent a roda
+- global values
+
+background-color
+background-image
+background-position: right center
+background-size
+background-origin-clip: border-box/content-box
+background-attachment: scroll/fixed
+shorthand: juntar todas propriedades acima em uma unica tag
+
+background: radial/linear-gradient(180deg, red, yellow, green)
+
+MEDIAS
+
+<video>
+
+- titulo em imagens <figure> <figcaption>
+
+------------------------------------------------------------------------------------------------------------
+
+POSICIONANDO FOGUETES
+
+layouts
+- tables 
+- floats clear
+- frameworks
+- flexbox
+- grid
+
+position
+- alterar fluxo dos elementos
+- static: fluxo normal
+- relative: 
+	top, right, bottom, left, z-index
+- absolute: referente a pagina inteira, tira do fluxo dos outros elementos
+- fixed: fixo em um local, porém em um novo fluxo na pagina
+- element stacking: empilhamento de elementos, z-index
+
+-FLEXBOX: posicionar elementos dentro da caixa
+	display: flex
+	justify-content
+
+-GRID
+	display: grid
+	
+
+<body>
+    <header>
+        <div>Logo</div>
+        <div>Menu</div>
+    </header>
+    <main>Conteúdo</main>
+    <aside>Infos adicionais</aside>
+    <footer>Rodapé</footer>
+</body>
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+    grid-template-rows: 30px 1fr 40px;
+    grid-template-columns: 1fr 80px;
+}
+
+header {
+    grid-area: header;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8px;
+}
+
+main {
+    grid-area: main;
+    background-color: red;
+}
+
+aside {
+    grid-area: aside;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    background-color: gray;
+}
+
+
+--------------------------------------------------------------------------------------------------------------
+
+fontes
+
+font-variant
+font-stretch
+letter-spacing - word-spacing
+line-height text-transform
+text-decoration
+text-align
+text-shadow
+
+Podemos usar o shorthand font para determinar os seguintes valores: font-style, font-variant, font-weight, font-stretch, font-size, line-height e font-family
+
+
+---------------------------------------------------------------------------
+
+FORMULARIOS
+
+<fieldset>
+- agrupamento de campos
+
+<label>
+- associar e identificar tag de entrada de dados
+
+<button>
+- enviar info
+
+<datalist>
+	<option>
+</
+-lista de infos
+
+<input>
+
+password
+- pattern
+- max min
+- inputmode
+
+file
+- accept
+- multiple
+- enctype
+
+checkbox
+
+hidden

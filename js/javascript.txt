@@ -1,0 +1,583 @@
+linguagem de programação que roda no navegador = front end
+roda tbm no back end
+
+sintaxe 
+    console.log("Hello world!")
+
+codepen io
+
+ECMAScript standard
+
+----------------------------------------------
+tipos de dados
+
+strings
+    - colocar espressão dentro de string ${expressão} - interpulação
+    ""
+    ''
+    `` = permite multiplas linhas na hora de escrever e permite colocar expressões dentro
+
+number
+    inteiros
+    float
+    NaN = not a number
+    Infinity = infinito // qse n é usado, é literalmente infinito
+
+boolean 
+    true
+    false
+
+undefined = indefinido - n existe
+null = nulo, objeto existe mas q n possui nada dentro
+
+object { propriedade: "valor" } = propriedades/atributos funcionalidades/métodos
+
+array []- vetores = uma lista, agrupamento de dados
+
+----------------------------------------------------
+variaveis
+
+nomes simbolicos para receber algum valor
+atalhos de código
+identificadores
+
+3 palavras reservadas para criar uma váriavel
+    var - dado q é variavel
+    let //
+    const // esses dois são os mais utilizados - valor q n muda constante
+
+tipos dinâmicos 
+fracamente tipada a dinamica
+não precisa falar exatamente qual o tipo de variavel que você está declarando
+para saber qual o tipo da variavel
+console.log(typeof clima)
+
+scope var = determina a visibilidade da variavel
+    block statement - declaração de bloco
+
+    var é local e global
+    se a variavel estiver dentro do bloco de código o browser vai conseguir decifrar ela por ser declarada como var
+    
+    código
+    {
+        bloco de código com uma variavel
+    }
+
+    hoisting // elevação, ou seja se declarar var dentro do bloco o código ira elevar ela ao inicio do codigo
+
+scope let e const = são locais e só funcionam no espopo onde foram criadas, ou seja, não poderam ser lidas fora do escopo como o var
+ 
+nomeando variaveis
+case sensitive
+pode iniciar com
+    $
+    _
+    letras
+    colocar acentos
+    camelCase
+    snake_case
+    escrever em inglês é mais recomendada
+---------------------------------------------------------------
+
+praticando e avançando
+
+declaração conjunta
+let age, isHuman
+age = 18
+isHuman = true
+console.log(age, isHuman) //para mostrar varias variaveis utilizar a virgula
+
+concatenar 
+    funciona igual no java 
+    console.log("algo aqui" + variavel + "outra frase aqui")
+    
+interpolando
+    console.log(`algo aqui ${variavel} outra frase aqui`)
+
+object
+    const person = {
+        name: 'Nath'
+        age: 18
+    }
+    console.log(person) //obj completo
+    console.log(person.name) //pegar um dado/propriedade especifico de dentro desse objeto
+
+arrays
+    const animals = [
+        'Lion',
+        ''Monkey
+        {
+            name: Cat
+            age: 3
+        }
+    ]
+
+    acessar valores
+    console.log(animals[0])
+
+    acessar valores de obj dentro do array
+    console.log(animals[2].name)
+
+    tamanho do array
+    console.log(animals.length)
+
+
+----------------------------------------
+
+functions - FUNÇÕES
+
+- reutilização de bloco de código
+
+-argumentos e parametros 
+
+    - declaração dentro de uma variavel
+
+    //function expression/anonymous
+    const sum = function(number1, number2){ // parametros
+        console.log(number1+number2)
+    }
+
+    sum(2,3) // argumentos
+
+- retornar valores dentro da função 
+
+    const sum = function(number1, number2){
+        let total = number1 + number2
+        return total
+    }
+
+    let number1 = 34
+    let number2 = 25
+
+    console.log(`o número 1 é ${number1}`)
+    console.log(`o número 2 é ${number2}`)
+    console.log(`a soma é $sum(number1, number2)`)
+
+- function scope
+    let subject
+
+    function createTHink(subject){
+        return subject
+    }
+
+    console.log(createTHink(subject))
+
+
+- function hoisting 
+    sayMyName()
+
+    function sayMyName()    {
+        console.log('Nathalia')
+    }
+
+
+- arrow function 
+
+    const sayMyName = () => {
+        console.log("Nathalia")
+    }
+    sayMyName()
+
+
+- callback function // chamando uma função de volta
+
+    function sayMyName(name){
+        console.log("antes de executar")
+
+        name()
+
+        console.log("depois de executar")
+    }
+
+    sayMyName(
+        () => {
+            console.log("callback")
+        }
+    )
+
+
+- function() constructor
+    expressão new 
+    criar um novo objeto
+    this keyword
+
+    function Person(){
+        this.name = name
+    }
+    const mayk = new Person("Mayk")
+    console.log(mayk)
+
+    function Person(){
+        this.name = name
+        this.walk = function(){
+            return this.name + " está andando"
+        }
+    }
+    const nathalia = new Person("Nathalia")
+    const mayk = new Person("Mayk")
+    console.log(mayk.walk())
+    console.log(nathalia.walk())
+
+
+----------------------------------------------------------------------------------------------------------
+
+MANIPULANDO DADOS
+
+- prototype  = protótipo: aquilo q é criado antes
+    js linguagem baseada em prototipo
+    prototype-based language
+    prototype chain
+    __proto__  
+
+-  type conversion (typecasting) vs Type coersion
+    alteração de um tipo de dado para outro tipo
+
+    Type coersion - quando o proprio js muda o valor
+    console.log('9' + 5)
+    console.log('9' + '5') // ele transforma o cinco em string para a sintaxe ficar melhor e o resultado daira somente 95
+
+    typecasting - quando nós mesmos fazemos a conversão do dado
+    console.log(Number('9') + 5)
+
+- transformar strings em numeros
+
+    let string = "123"
+    console.log(Number(string))
+    let number = 321
+    console.log(String(number))
+
+- Contar caracteres e digitos
+    let word = "Paralelepipedo"
+    console.log(word.length)
+    let number = 12345
+    console.log(String(numeber).length)
+
+- Casas decimais
+    transfrmar número quebrado com 2 casas decimais e trocar ponto por virgula
+
+    let number = 32423424.2344234
+    console.log(number.toFixed(2).replace(".",",")) //quando coloca  a virgula automaticamente transforma em string tbm
+
+-maiusculas e minusculas
+
+    let word = "Estudar é importante"
+    console.log(word.toLowerCase())
+    console.log(word.toUppererCase())
+
+- separar strings
+
+    let phrase = "Eu quero viver o AMor!"
+    let myArray = phrase.split(" ") // da pra colocar pra separar por letra q aparece ex phrase.split("o")
+    console.log(myArray)
+
+    let phrase1 = myArray.join(" ") //juntar info de array tudo em uma string
+
+- verificar se tem a palavra desejada
+
+    let phrase = "Eu quero estudar"
+    console.log(phrase.includes("estudar")) //ele é case sensitive
+
+- criar array com constructor
+
+    let myArray = new Array(10)
+    console.log(myArray)
+
+- contar elementos do array
+
+    console.log(["a", "b", "c"].length)
+
+- string para array
+
+    let word = "manipulação"
+    console.log(Array.from(word))
+
+- MANIPULANDO ARRAYS -------------------------
+
+let techs = ["html", "css", "js"]
+
+//adicionar um item no fim
+techs.push("nodejs")
+
+// adicionar no começo
+techs.unshift("sql")
+
+//remover do fim
+techs.pop()
+
+// remover do começo
+techs.shift()
+
+//pegar somente alguns elementos do array
+console.log(techs.slice(1, 3)) - primeiro numero é onde vc quer começar a cortar, segundo é ate onde vai
+
+// remover 1 ou mais itens em qualquer posição do array
+techs.splice(1, 1) - primeiro num é onde começa a cortar, segundo num é a qntde q tem q remover
+
+// encontrar a posição de um elemento no array
+let index = techs.indexOf('css')
+tech.splice(index)
+
+console.log(techs)
+
+-------------------------------------------------------------------------------------------
+EXPRESSÕES E OPERADORES
+
+expressões 
+- let number = 1
+
+operadores
+- binario 
+    console.log(number + 1)
+- unário
+    console.log(++number)
+    console.log(typeof number)
+- ternário
+    console.log(false ? 'alo' : 'nada')
+
+
+NEW ----------------
+
+- left-hand-side expression
+- criar um novo objeto
+
+let name = new String('Mayk')
+
+operores unários -----
+typeof - retorna o tipo de dado
+delete - deleta um info
+    const person = {
+        name ='Nath',
+        sge 25,
+    }
+    delete person.age
+    console.log(person)
+
+operadores aritméticos
+//multiplicação * 
+//divisão /
+//soma +
+//subtração -
+
+//resto da divisão % = remainder
+//incremento ++
+//decremento --
+//exponencial **
+
+
+GROUPING OPERATOR ----------------------------------------
+
+() - literalmente agrupar operações/valores
+
+
+OPERADORES DE COMPARAÇÃO -------------------------------
+
+== igual a
+!= diferente de 
+=== estritamente igual
+!== estritamente diferente
+> maior
+>= maior e igual
+< menor
+<= menor e igual
+
+OPERADORES DE ATRIBUIÇÃO ----------------------------------
+
+x = 1 - assignment/atribuição 
+x += 2 - addition assignment
+x -= 1 - subtraction assignment
+x *=2 - multiplication assignment
+x /= 2 - division assignment
+x %= 2 - remainder
+x**=2 - exponetiation
+
+OPERADORES LÓGIOS -----------------------------------------
+
+&& AND
+|| OR
+! NOT - trocar valor booleano
+
+OPERADOR CONDICIONAL - ternário ---------------------------
+
+let pao = true
+let quiejo = true
+
+const niceBreakfast = pao && queijo ? "Café top" : "Café ruim"
+
+console.log(niceBreakfast)
+
+OPERATOR STRING -------------------------------------------
+ 
+concatenation +
+
+FALSY E TRUTHY ------------------------------------
+
+falsy: quando um valor é considerado false em contextos onde um booleano é obrigatório (condicionais e loops)
+- false
+- 0
+- -0
+- ""
+- null
+- undefined
+-NaN
+
+thuthy: quando um valor é considerado true em contextos onde um booleano é obrigatório
+
+- true
+- {}
+- []
+- 1
+- 3,23
+- "0"
+- "false"
+- -1
+- Infinity
+- -Infinity
+
+PRECEDENCIA DOS OPERADORES ---------------------
+
+- grouping ()
+- negação e incremento ! ++ --
+- multi divi * /
+- adi sub + -
+- relacional < <= > >=
+- igualdade == !=
+- AND &&
+- OR ||
+- condicional ?:
+- assignment + +=
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+CONDICIONAIS E CONTROLES DE FLUXO
+
+if e else -----------------------------------
+
+let temperature = 38
+if(temperature >= 37){
+    console.log('Febre alta')
+}else {
+    console.log('Saudável')
+}
+
+switch -----------------------------------------
+
+
+function calculate(number1, operator, number2) {
+    let result = 0;
+
+    switch (operator) {
+        case '+':
+            result = number1 + number2
+            break
+        case '-':
+            result = number1 - number2 
+            break
+        case '*':
+            result = number1 * number2
+            break
+        case '/':
+            result = number1 / number2 
+            break
+        default:
+            console.log('não implementado')
+            break
+    }
+
+    return result
+}
+
+console.log(calculate(4, '%', 8))
+
+throw e try/catch ------------------------------------
+
+capturar erros, sem danificar a continuidade do código, apenas quando acompanhado do try/catch
+
+throw = disparar
+
+function sayMyName(name = '') {
+    if (name === ''){
+        throw new Error ("NOme é necessário")
+    }
+
+    cnsole.log("Depois do erro")
+}
+
+try {
+    sayMyname()
+} catch (e){
+    console.log(e)
+}
+
+----------------------------------------------------------------------------------------------------------------------------
+
+ESTRUTURAS DE REPETIÇÃO
+
+for ----------------------
+for(inicialização de uma variável; condição de continuação para o loop; expressão final)
+
+//incrementando
+for(let i = 10; i <= 10; i++){
+    console.log(i)
+}
+
+//decremento 
+//incrementando
+for(let i = 100; i > 0; i--){
+    console.log(i)
+}
+
+for(let i = 100; i > 0; i--){
+    if(i === 50){
+        break; //para a execução
+    }
+    console.log(i)
+}
+
+for(let i = 100; i > 0; i--){
+    if(i === 50){
+        continue //continua a execução
+    }
+    console.log(i)
+}
+
+while ----------------------------------
+
+let i = 0
+while(i < 10){
+    console.log(i)
+    i++
+}
+
+for of -------------------------
+
+let name = 'Mayk'
+let names = [
+    'João',
+    'Paulo',
+    'Pedro'
+]
+
+//pega uma info de cada vez
+for(let name of names){
+    console.log(name)
+}
+
+for in -------------------------------
+
+quais propriedades tem nesse obj, o nome delas, n a info que está contida dentro
+
+let person = {
+    name: 'John',
+    age 30,
+}
+for(let property in person){
+    console.log(property)
+}
+
+
+
+
+
+
+
+
